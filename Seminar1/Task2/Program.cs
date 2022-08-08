@@ -12,5 +12,5 @@ if(n2>n1)
 }
 if(n1==n2) 
 {
-        Console.WriteLine("First number is equal tosecond number");
+        Console.WriteLine("First number is equal to second number");
 }
