@@ -1,10 +1,20 @@
 ﻿// See https://aka.ms/new-console-template for more information
+
 Console.WriteLine("Enter integer number");
 int a = Convert.ToInt32(Console.ReadLine());
+int x=Math.Abs(a);
+string str = x.ToString();
+int[] b = new int[str.Length];
 int sum = 0;
-while (a > 0)
+for( int i=0; i< str.Length; i++)
 {
-    sum = sum + a % 10;
-    a = a /10 ;
+     b[i] = int.Parse(str[i].ToString());;
+     sum = sum+ b[i];
 }
-Console.WriteLine("Sum of the digits in this number is: "+sum);
+if (a < 0) 
+{
+    sum=sum + (b[0]+b[0])*(-1);
+    Console.WriteLine($"Result is: {sum}");
+}
+else Console.WriteLine($"Sum of the digits of this number is: {sum}");
+
