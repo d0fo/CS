@@ -15,6 +15,5 @@ int[] Array()
             Console.Write(arr[i]+" ");
         }
         return brr;
-        
 }
 Console.WriteLine('['+string.Join(", ", Array())+']');
