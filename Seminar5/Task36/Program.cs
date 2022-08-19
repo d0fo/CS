@@ -1,13 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
-int[] a = new int [123]; 
+int[] a = new int [8]; 
     for(int i=0; i<a.Length; i++)
     {
-        a[i] = new Random().Next(0,1000);
+        a[i] = new Random().Next(0,11);
     }
 Console.WriteLine('['+string.Join(", ", a)+']');
 int sum = 0;
-for(int i = 0; i < a.Length;i++)
+for(int i = 1; i < a.Length;i+=2)
 {
-    if(a[i]<=99&a[i]>=10) sum=sum+1;
+   sum=sum+a[i];
 }
-Console.WriteLine($"Massive contain {sum} numbers in [10;99] interval");
+Console.WriteLine($"Sum of the elements placed on uneven places is {sum}");

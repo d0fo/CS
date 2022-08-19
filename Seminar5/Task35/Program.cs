@@ -1,13 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
-int[] arr =new int[8];
-    for(int i=0; i<arr.Length; i++)
+int[] a = new int [123]; 
+    for(int i=0; i<a.Length; i++)
     {
-        arr[i] = new Random().Next(100,1000);
+        a[i] = new Random().Next(0,1000);
     }
-Console.WriteLine('['+string.Join(", ", arr)+']');
+Console.WriteLine('['+string.Join(", ", a)+']');
 int sum = 0;
-for(int i = 0; i < arr.Length;i++)
+for(int i = 0; i < a.Length;i++)
 {
-    if(arr[i]%2==0) sum=sum+1;
+    if(a[i]<=99&a[i]>=10) sum=sum+1;
 }
-Console.WriteLine($"Massive contain {sum} even numbers");
+Console.WriteLine($"Massive contain {sum} numbers in [10;99] interval");
