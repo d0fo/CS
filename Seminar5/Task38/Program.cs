@@ -1,15 +1,21 @@
 ﻿// See https://aka.ms/new-console-template for more information
-double[] a = new double [8];
-Random rand = new Random();
-double min = 0;
-double max = 0;
-    for(int i=0; i<a.Length; i++)
+Console.WriteLine("Enter lenght of the massive");
+int n = Convert.ToInt32(Console.ReadLine());
+double[] a = new double [n];
+for(int i =0; i<a.Length;i++)
     {
-        a[i] = rand.Next(0,11) + rand.NextDouble();
-        if(a[i]>max) max=a[i];
-        if(a[i]<min) min=a[i];
+        Console.WriteLine($"Enter {i+1} element of massive");
+        a[i]=Convert.ToDouble(Console.ReadLine());
     }
 Console.WriteLine('['+string.Join(", ", a)+']');
+double min = a[0];
+double max = a[0];
+for(int i=0; i<a.Length; i++)
+   {
+         if(max<a[i]) max=a[i];
+         if(min>a[i]) min=a[i];
+   }
+
 Console.WriteLine($"Difference between max and min elemnt is: {max} - {min} = {max-min}");
 
 
