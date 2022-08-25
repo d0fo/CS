@@ -9,7 +9,7 @@ Console.WriteLine("Enter b2");
 double b2 = Convert.ToInt32(Console.ReadLine());
 if(b1==b2&k1==k2) Console.WriteLine("This functions describe one line");
 if(b1!=b2&k1==k2)Console.WriteLine("Lines are parellel");
-else
+if (b1!=b2&k1!=k2)
 {
     double x =(b2-b1)/(k1-k2);
     double y =k1*(b2-b1)/(k1-k2)+b1;
