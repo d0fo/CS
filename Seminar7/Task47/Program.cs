@@ -5,7 +5,6 @@ void PrintArray(double[,] matr)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            // Console.Write($"{matr[i, j]} ");
             Console.Write("{0,6:F2}", matr[i, j]);
         }
     Console.WriteLine();
